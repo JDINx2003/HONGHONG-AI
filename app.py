@@ -6,7 +6,7 @@ import time
 import os
 
 # --- 1. 页面配置 ---
-st.set_page_config(page_title="哄哄 - Gemini语音版", page_icon="🧸")
+st.set_page_config(page_title="哄哄 - Gemini语音版", page_icon="icon.png")
 st.title("🧸 哄哄 - 你的专属情绪搭档")
 
 # --- 2. 侧边栏设置 ---
