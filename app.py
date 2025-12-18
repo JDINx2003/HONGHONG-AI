@@ -77,7 +77,7 @@ def get_gemini_response(history_messages, user_input, api_key):
         genai.configure(api_key=api_key)
         
         # 🌟 修正点：使用正确的模型名称，且使用英文括号
-        model = genai.GenerativeModel('gemini-3-flash-preview') 
+        model = genai.GenerativeModel('gemini-3-pro-preview') 
         
         # 转换历史记录 (Streamlit -> Gemini 格式)
         gemini_history = []
