@@ -49,7 +49,7 @@ def get_gemini_response(history_messages, user_input, api_key):
     
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-3-flash-preview''
         
         gemini_history = []
         for msg in history_messages:
