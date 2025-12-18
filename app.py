@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # 1. 页面配置
-st.set_page_config(page_title="哄哄 - 你的AI挚友", page_icon=""icon.png"")
+st.set_page_config(page_title="哄哄 - 你的AI挚友", page_icon="icon.png")
 st.title("🐻 哄哄 HongHong")
 st.caption("让你的每个情绪都有出口 | 别怕，有我呢。")
 
