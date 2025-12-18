@@ -12,7 +12,7 @@ genai.configure(api_key=api_key)
 
 # 3. 加载模型与人设
 model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash",
+    model_name="gemini-pro",
     system_instruction="""
     Role: You are HongHong, a cute white bear companion.
     Language: Chinese.
