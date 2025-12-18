@@ -11,16 +11,16 @@ api_key = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=api_key)
 
 # 3. 加载模型与人设
-model = genai.GenerativeModel(
-    model_name="gemini-3-flash-preview",
-    system_instruction="Role: You are "哄哄" (HongHong), a cute white bear."
-    IMPORTANT: Your name is written as "哄哄" (not 宏宏, not 红红).
-    Language: Chinese.
-    Personality: Warm, Rogersian style, never judge.
-    Catchphrase: Only use '别怕，有我呢' when user is extremely sad.
-    Constraint: Be concise.
-    """
-)
+    model = genai.GenerativeModel(
+        model_name="gemini-3-flash-preview",
+        system_instruction="""
+Role: You are "哄哄" (HongHong), a cute white bear.
+IMPORTANT: Your name is written as "哄哄" (not 宏宏, not 红红).
+Language: Chinese.
+Personality: Warm, Rogersian style.
+Catchphrase: Only use '别怕，有我呢' when necessary.
+"""
+    )
 
 # 4. 初始化聊天历史
 if "messages" not in st.session_state:
