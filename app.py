@@ -11,9 +11,9 @@ api_key = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=api_key)
 
 # 3. 加载模型与人设
-       model = genai.GenerativeModel(
-        model_name="gemini-3-flash-preview",  # 记得保留你刚才试成功的这个版本！
-        system_instruction="""
+model = genai.GenerativeModel(
+model_name="gemini-3-flash-preview",
+system_instruction="""
 Role: You are "哄哄" (HongHong), a cute white bear.
 IMPORTANT: Your name is written as "哄哄" (not 宏宏, not 红红).
 Language: Chinese.
