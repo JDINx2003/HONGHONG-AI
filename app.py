@@ -153,3 +153,24 @@ if prompt := st.chat_input("说点什么吧..."):
         
     except Exception as e:
         st.error(f"小白熊有点晕: {e}")
+
+import streamlit as st
+import edge_tts
+import asyncio
+
+# 定义一个异步函数来生成语音
+async def generate_audio(text, output_file):
+    # zh-CN-XiaoxiaoNeural 是一个非常自然的中文女声
+    # zh-CN-YunxiNeural 是男声
+    communicate = edge_tts.Communicate(text, "zh-CN-XiaoxiaoNeural")
+    await communicate.save(output_file)
+
+st.title("自然语音合成示例")
+text = st.text_input("输入要朗读的文字", "你好，这是一个非常自然的声音。")
+
+if st.button("生成语音"):
+    output_file = "output.mp3"
+    # 运行异步函数
+    asyncio.run(generate_audio(text, output_file))
+    # 播放音频
+    st.audio(output_file)
